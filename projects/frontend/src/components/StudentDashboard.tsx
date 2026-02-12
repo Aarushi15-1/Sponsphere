@@ -1,6 +1,18 @@
-export default function StudentDashboard() {
+type Props = {
+  goHome: () => void
+}
+
+export default function StudentDashboard({ goHome }: Props) {
   return (
     <div className="min-h-screen bg-gray-950 text-white p-10">
+      
+      <button
+        onClick={goHome}
+        className="mb-8 text-gray-400 hover:text-white"
+      >
+        ← Back
+      </button>
+
       <h1 className="text-3xl font-bold mb-8">
         Student Dashboard
       </h1>
